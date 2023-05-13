@@ -39,26 +39,30 @@ public partial class CurrencyConverter : Form
         privateFonts.AddFontFile(fontPath);
 
         // Create a Font object using the custom font from the PrivateFontCollection
-        Font PoppinsBold = new Font(privateFonts.Families[0], 12f, FontStyle.Bold);
+        Font PoppinsBold16 = new Font(privateFonts.Families[0], 16f, FontStyle.Bold);
+        Font PoppinsBold13 = new Font(privateFonts.Families[0], 13f, FontStyle.Bold);
+        Font PoppinsBold10 = new Font(privateFonts.Families[0], 10f, FontStyle.Bold);
+        Font PoppinsBold9 = new Font(privateFonts.Families[0], 9f, FontStyle.Bold);
+        Font PoppinsBold8 = new Font(privateFonts.Families[0], 8f, FontStyle.Bold);
 
         // Set the custom font
 
         // Labels
-        titleLabel.Font = PoppinsBold;
-        amountLabel.Font = PoppinsBold;
-        toLabel.Font = PoppinsBold;
-        fromLabel.Font = PoppinsBold;
-        resultLabel.Font = PoppinsBold;
+        titleLabel.Font = PoppinsBold16;
+        amountLabel.Font = PoppinsBold9;
+        toLabel.Font = PoppinsBold9;
+        fromLabel.Font = PoppinsBold9;
+        resultLabel.Font = PoppinsBold13;
 
         // Buttons
-        ConvertButton.Font = PoppinsBold;
+        ConvertButton.Font = PoppinsBold10;
 
         // Textboxes
-        sourceAmountTextBox.Font = PoppinsBold;
+        sourceAmountTextBox.Font = PoppinsBold8;
 
         // Dropdown menu
-        sourceCurrencycomboBox.Font = PoppinsBold;
-        targetCurrencycomboBox.Font = PoppinsBold;
+        sourceCurrencycomboBox.Font = PoppinsBold8;
+        targetCurrencycomboBox.Font = PoppinsBold8;
     }
 
     // Events Handling
