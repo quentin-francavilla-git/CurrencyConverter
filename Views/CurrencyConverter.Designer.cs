@@ -41,10 +41,10 @@ partial class CurrencyConverter
         targetCurrencycomboBox = new Bunifu.UI.WinForms.BunifuDropdown();
         sourceAmountTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
         bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-        bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-        bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-        bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-        bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+        titleLabel = new Bunifu.UI.WinForms.BunifuLabel();
+        amountLabel = new Bunifu.UI.WinForms.BunifuLabel();
+        fromLabel = new Bunifu.UI.WinForms.BunifuLabel();
+        toLabel = new Bunifu.UI.WinForms.BunifuLabel();
         refreshButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
         bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
         SuspendLayout();
@@ -116,7 +116,7 @@ partial class CurrencyConverter
         ConvertButton.AutoSizeLeftIcon = true;
         ConvertButton.AutoSizeRightIcon = true;
         ConvertButton.BackColor = Color.Transparent;
-        ConvertButton.BackColor1 = Color.RoyalBlue;
+        ConvertButton.BackColor1 = Color.FromArgb(253, 70, 92);
         ConvertButton.BackgroundImage = (Image)resources.GetObject("ConvertButton.BackgroundImage");
         ConvertButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
         ConvertButton.ButtonText = "CONVERT";
@@ -144,10 +144,10 @@ partial class CurrencyConverter
         ConvertButton.IconRightCursor = Cursors.Default;
         ConvertButton.IconRightPadding = new Padding(3, 3, 7, 3);
         ConvertButton.IconSize = 25;
-        ConvertButton.IdleBorderColor = Color.RoyalBlue;
+        ConvertButton.IdleBorderColor = Color.Transparent;
         ConvertButton.IdleBorderRadius = 40;
         ConvertButton.IdleBorderThickness = 1;
-        ConvertButton.IdleFillColor = Color.RoyalBlue;
+        ConvertButton.IdleFillColor = Color.FromArgb(253, 70, 92);
         ConvertButton.IdleIconLeftImage = null;
         ConvertButton.IdleIconRightImage = null;
         ConvertButton.IndicateFocus = false;
@@ -161,19 +161,19 @@ partial class CurrencyConverter
         ConvertButton.OnDisabledState.ForeColor = Color.FromArgb(168, 160, 168);
         ConvertButton.OnDisabledState.IconLeftImage = null;
         ConvertButton.OnDisabledState.IconRightImage = null;
-        ConvertButton.onHoverState.BorderColor = Color.FromArgb(89, 127, 242);
+        ConvertButton.onHoverState.BorderColor = Color.Transparent;
         ConvertButton.onHoverState.BorderRadius = 40;
         ConvertButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
         ConvertButton.onHoverState.BorderThickness = 1;
-        ConvertButton.onHoverState.FillColor = Color.FromArgb(89, 127, 242);
+        ConvertButton.onHoverState.FillColor = Color.FromArgb(255, 101, 120);
         ConvertButton.onHoverState.ForeColor = Color.White;
         ConvertButton.onHoverState.IconLeftImage = null;
         ConvertButton.onHoverState.IconRightImage = null;
-        ConvertButton.OnIdleState.BorderColor = Color.RoyalBlue;
+        ConvertButton.OnIdleState.BorderColor = Color.Transparent;
         ConvertButton.OnIdleState.BorderRadius = 40;
         ConvertButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
         ConvertButton.OnIdleState.BorderThickness = 1;
-        ConvertButton.OnIdleState.FillColor = Color.RoyalBlue;
+        ConvertButton.OnIdleState.FillColor = Color.FromArgb(253, 70, 92);
         ConvertButton.OnIdleState.ForeColor = Color.White;
         ConvertButton.OnIdleState.IconLeftImage = null;
         ConvertButton.OnIdleState.IconRightImage = null;
@@ -329,69 +329,69 @@ partial class CurrencyConverter
         bunifuSeparator1.Size = new Size(475, 28);
         bunifuSeparator1.TabIndex = 13;
         // 
-        // bunifuLabel1
+        // titleLabel
         // 
-        bunifuLabel1.AllowParentOverrides = false;
-        bunifuLabel1.AutoEllipsis = false;
-        bunifuLabel1.CursorType = Cursors.Default;
-        bunifuLabel1.Font = new Font("Poppins", 16F, FontStyle.Bold, GraphicsUnit.Point);
-        bunifuLabel1.ForeColor = Color.White;
-        bunifuLabel1.Location = new Point(188, 63);
-        bunifuLabel1.Name = "bunifuLabel1";
-        bunifuLabel1.RightToLeft = RightToLeft.No;
-        bunifuLabel1.Size = new Size(268, 46);
-        bunifuLabel1.TabIndex = 15;
-        bunifuLabel1.Text = "Currency Converter";
-        bunifuLabel1.TextAlignment = ContentAlignment.TopLeft;
-        bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+        titleLabel.AllowParentOverrides = false;
+        titleLabel.AutoEllipsis = false;
+        titleLabel.CursorType = Cursors.Default;
+        titleLabel.Font = new Font("Poppins", 16F, FontStyle.Bold, GraphicsUnit.Point);
+        titleLabel.ForeColor = Color.White;
+        titleLabel.Location = new Point(188, 63);
+        titleLabel.Name = "titleLabel";
+        titleLabel.RightToLeft = RightToLeft.No;
+        titleLabel.Size = new Size(268, 46);
+        titleLabel.TabIndex = 15;
+        titleLabel.Text = "Currency Converter";
+        titleLabel.TextAlignment = ContentAlignment.TopLeft;
+        titleLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
         // 
-        // bunifuLabel2
+        // amountLabel
         // 
-        bunifuLabel2.AllowParentOverrides = false;
-        bunifuLabel2.AutoEllipsis = false;
-        bunifuLabel2.CursorType = Cursors.Default;
-        bunifuLabel2.Font = new Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point);
-        bunifuLabel2.ForeColor = Color.White;
-        bunifuLabel2.Location = new Point(138, 145);
-        bunifuLabel2.Name = "bunifuLabel2";
-        bunifuLabel2.RightToLeft = RightToLeft.No;
-        bunifuLabel2.Size = new Size(58, 25);
-        bunifuLabel2.TabIndex = 16;
-        bunifuLabel2.Text = "Amount";
-        bunifuLabel2.TextAlignment = ContentAlignment.TopLeft;
-        bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+        amountLabel.AllowParentOverrides = false;
+        amountLabel.AutoEllipsis = false;
+        amountLabel.CursorType = Cursors.Default;
+        amountLabel.Font = new Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point);
+        amountLabel.ForeColor = Color.White;
+        amountLabel.Location = new Point(138, 145);
+        amountLabel.Name = "amountLabel";
+        amountLabel.RightToLeft = RightToLeft.No;
+        amountLabel.Size = new Size(58, 25);
+        amountLabel.TabIndex = 16;
+        amountLabel.Text = "Amount";
+        amountLabel.TextAlignment = ContentAlignment.TopLeft;
+        amountLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
         // 
-        // bunifuLabel3
+        // fromLabel
         // 
-        bunifuLabel3.AllowParentOverrides = false;
-        bunifuLabel3.AutoEllipsis = false;
-        bunifuLabel3.CursorType = Cursors.Default;
-        bunifuLabel3.Font = new Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point);
-        bunifuLabel3.ForeColor = Color.White;
-        bunifuLabel3.Location = new Point(346, 145);
-        bunifuLabel3.Name = "bunifuLabel3";
-        bunifuLabel3.RightToLeft = RightToLeft.No;
-        bunifuLabel3.Size = new Size(38, 25);
-        bunifuLabel3.TabIndex = 17;
-        bunifuLabel3.Text = "Form";
-        bunifuLabel3.TextAlignment = ContentAlignment.TopLeft;
-        bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+        fromLabel.AllowParentOverrides = false;
+        fromLabel.AutoEllipsis = false;
+        fromLabel.CursorType = Cursors.Default;
+        fromLabel.Font = new Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point);
+        fromLabel.ForeColor = Color.White;
+        fromLabel.Location = new Point(346, 145);
+        fromLabel.Name = "fromLabel";
+        fromLabel.RightToLeft = RightToLeft.No;
+        fromLabel.Size = new Size(38, 25);
+        fromLabel.TabIndex = 17;
+        fromLabel.Text = "Form";
+        fromLabel.TextAlignment = ContentAlignment.TopLeft;
+        fromLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
         // 
-        // bunifuLabel4
+        // toLabel
         // 
-        bunifuLabel4.AllowParentOverrides = false;
-        bunifuLabel4.AutoEllipsis = false;
-        bunifuLabel4.CursorType = Cursors.Default;
-        bunifuLabel4.Font = new Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point);
-        bunifuLabel4.ForeColor = Color.White;
-        bunifuLabel4.Location = new Point(486, 145);
-        bunifuLabel4.Name = "bunifuLabel4";
-        bunifuLabel4.RightToLeft = RightToLeft.No;
-        bunifuLabel4.Size = new Size(17, 25);
-        bunifuLabel4.TabIndex = 18;
-        bunifuLabel4.Text = "To";
-        bunifuLabel4.TextAlignment = ContentAlignment.TopLeft;
-        bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+        toLabel.AllowParentOverrides = false;
+        toLabel.AutoEllipsis = false;
+        toLabel.CursorType = Cursors.Default;
+        toLabel.Font = new Font("Poppins", 9F, FontStyle.Bold, GraphicsUnit.Point);
+        toLabel.ForeColor = Color.White;
+        toLabel.Location = new Point(486, 145);
+        toLabel.Name = "toLabel";
+        toLabel.RightToLeft = RightToLeft.No;
+        toLabel.Size = new Size(17, 25);
+        toLabel.TabIndex = 18;
+        toLabel.Text = "To";
+        toLabel.TextAlignment = ContentAlignment.TopLeft;
+        toLabel.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
         // 
         // refreshButton
         // 
@@ -425,7 +425,7 @@ partial class CurrencyConverter
         refreshButton.ForeColor = Color.White;
         refreshButton.IconLeftAlign = ContentAlignment.MiddleLeft;
         refreshButton.IconLeftCursor = Cursors.Default;
-        refreshButton.IconLeftPadding = new Padding(11, 3, 3, 3);
+        refreshButton.IconLeftPadding = new Padding(10, 3, 3, 3);
         refreshButton.IconMarginLeft = 11;
         refreshButton.IconPadding = 10;
         refreshButton.IconRightAlign = ContentAlignment.MiddleRight;
@@ -453,7 +453,7 @@ partial class CurrencyConverter
         refreshButton.onHoverState.BorderRadius = 40;
         refreshButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
         refreshButton.onHoverState.BorderThickness = 1;
-        refreshButton.onHoverState.FillColor = Color.RoyalBlue;
+        refreshButton.onHoverState.FillColor = Color.FromArgb(253, 70, 92);
         refreshButton.onHoverState.ForeColor = Color.White;
         refreshButton.onHoverState.IconLeftImage = null;
         refreshButton.onHoverState.IconRightImage = null;
@@ -473,7 +473,7 @@ partial class CurrencyConverter
         refreshButton.OnPressedState.ForeColor = Color.White;
         refreshButton.OnPressedState.IconLeftImage = null;
         refreshButton.OnPressedState.IconRightImage = null;
-        refreshButton.Size = new Size(45, 42);
+        refreshButton.Size = new Size(42, 42);
         refreshButton.TabIndex = 19;
         refreshButton.TextAlign = ContentAlignment.MiddleCenter;
         refreshButton.TextAlignment = HorizontalAlignment.Center;
@@ -523,10 +523,10 @@ partial class CurrencyConverter
         ClientSize = new Size(782, 355);
         Controls.Add(bunifuImageButton1);
         Controls.Add(refreshButton);
-        Controls.Add(bunifuLabel4);
-        Controls.Add(bunifuLabel3);
-        Controls.Add(bunifuLabel2);
-        Controls.Add(bunifuLabel1);
+        Controls.Add(toLabel);
+        Controls.Add(fromLabel);
+        Controls.Add(amountLabel);
+        Controls.Add(titleLabel);
         Controls.Add(bunifuSeparator1);
         Controls.Add(sourceAmountTextBox);
         Controls.Add(targetCurrencycomboBox);
@@ -553,10 +553,10 @@ partial class CurrencyConverter
     private Bunifu.UI.WinForms.BunifuDropdown targetCurrencycomboBox;
     private Bunifu.UI.WinForms.BunifuTextBox sourceAmountTextBox;
     private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-    private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-    private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-    private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-    private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+    private Bunifu.UI.WinForms.BunifuLabel titleLabel;
+    private Bunifu.UI.WinForms.BunifuLabel amountLabel;
+    private Bunifu.UI.WinForms.BunifuLabel fromLabel;
+    private Bunifu.UI.WinForms.BunifuLabel toLabel;
     private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 refreshButton;
     private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
 }

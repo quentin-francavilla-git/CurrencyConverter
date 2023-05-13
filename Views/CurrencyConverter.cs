@@ -1,12 +1,8 @@
 using CurrencyConverter.ViewModels;
 using CurrencyConverter.Services;
-using System.Security.Cryptography.X509Certificates;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
-using CurrencyConverter.Models;
-using System.ComponentModel;
-using Microsoft.VisualBasic.Logging;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using CurrencyConverter.Helpers;
+using CurrencyConverter.Models;
+using System.Drawing.Text;
 
 namespace CurrencyConverter;
 
@@ -18,6 +14,7 @@ public partial class CurrencyConverter : Form
     {
         InitializeComponent();
         InitializeViewModel();
+        LoadAndUseFont();
         CurrencyConverter_Load(); // On load method for components
         ConvertButton.Click += delegate { ConvertButton_ClickAsync(); };
         refreshButton.Click += delegate { RefreshButton_ClickAsync(); };
@@ -29,6 +26,39 @@ public partial class CurrencyConverter : Form
         ViewModel = new MainViewModel(exchangeRateService); // Injecting ExchangeCurrencyService in ViewModel
 
         DataBindingsHelper.Bind(ViewModel, sourceAmountTextBox, resultLabel, sourceCurrencycomboBox, targetCurrencycomboBox);
+    }
+
+    private void LoadAndUseFont()
+    {
+        // Load the embedded font resource
+        PrivateFontCollection privateFonts = new PrivateFontCollection();
+
+        string fontPath = "Resources/Fonts/Poppins-Bold.ttf"; // Adjust the path accordingly
+
+        // Load the custom font file
+        privateFonts.AddFontFile(fontPath);
+
+        // Create a Font object using the custom font from the PrivateFontCollection
+        Font PoppinsBold = new Font(privateFonts.Families[0], 12f, FontStyle.Bold);
+
+        // Set the custom font
+
+        // Labels
+        titleLabel.Font = PoppinsBold;
+        amountLabel.Font = PoppinsBold;
+        toLabel.Font = PoppinsBold;
+        fromLabel.Font = PoppinsBold;
+        resultLabel.Font = PoppinsBold;
+
+        // Buttons
+        ConvertButton.Font = PoppinsBold;
+
+        // Textboxes
+        sourceAmountTextBox.Font = PoppinsBold;
+
+        // Dropdown menu
+        sourceCurrencycomboBox.Font = PoppinsBold;
+        targetCurrencycomboBox.Font = PoppinsBold;
     }
 
     // Events Handling
