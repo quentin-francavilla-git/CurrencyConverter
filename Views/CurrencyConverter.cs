@@ -55,6 +55,8 @@ public partial class CurrencyConverter : Form
         // Dropdown menu
         sourceCurrencycomboBox.Font = new Font(privateFonts.Families[0], sourceCurrencycomboBox.Font.Size, FontStyle.Regular);
         targetCurrencycomboBox.Font = new Font(privateFonts.Families[0], targetCurrencycomboBox.Font.Size, FontStyle.Regular);
+
+        refreshButton.IdleBorderRadius = refreshButton.Width / 2;
     }
 
     // Events Handling
