@@ -46,7 +46,7 @@ partial class CurrencyConverter
         fromLabel = new Bunifu.UI.WinForms.BunifuLabel();
         toLabel = new Bunifu.UI.WinForms.BunifuLabel();
         refreshButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-        bunifuImageButton1 = new Bunifu.UI.WinForms.BunifuImageButton();
+        logoImageButton = new Bunifu.UI.WinForms.BunifuImageButton();
         SuspendLayout();
         // 
         // resultLabel
@@ -423,9 +423,9 @@ partial class CurrencyConverter
         refreshButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
         refreshButton.Font = new Font("Poppins", 10F, FontStyle.Bold, GraphicsUnit.Point);
         refreshButton.ForeColor = Color.White;
-        refreshButton.IconLeftAlign = ContentAlignment.MiddleLeft;
-        refreshButton.IconLeftCursor = Cursors.Default;
-        refreshButton.IconLeftPadding = new Padding(10, 3, 3, 3);
+        refreshButton.IconLeftAlign = ContentAlignment.MiddleCenter;
+        refreshButton.IconLeftCursor = Cursors.Arrow;
+        refreshButton.IconLeftPadding = new Padding(0);
         refreshButton.IconMarginLeft = 11;
         refreshButton.IconPadding = 10;
         refreshButton.IconRightAlign = ContentAlignment.MiddleRight;
@@ -440,6 +440,7 @@ partial class CurrencyConverter
         refreshButton.IdleIconRightImage = null;
         refreshButton.IndicateFocus = false;
         refreshButton.Location = new Point(612, 173);
+        refreshButton.Margin = new Padding(0);
         refreshButton.Name = "refreshButton";
         refreshButton.OnDisabledState.BorderColor = Color.FromArgb(191, 191, 191);
         refreshButton.OnDisabledState.BorderRadius = 40;
@@ -481,39 +482,39 @@ partial class CurrencyConverter
         refreshButton.TextPadding = new Padding(0);
         refreshButton.UseDefaultRadiusAndThickness = true;
         // 
-        // bunifuImageButton1
+        // logoImageButton
         // 
-        bunifuImageButton1.ActiveImage = null;
-        bunifuImageButton1.AllowAnimations = true;
-        bunifuImageButton1.AllowBuffering = false;
-        bunifuImageButton1.AllowToggling = false;
-        bunifuImageButton1.AllowZooming = true;
-        bunifuImageButton1.AllowZoomingOnFocus = false;
-        bunifuImageButton1.BackColor = Color.Transparent;
-        bunifuImageButton1.DialogResult = DialogResult.None;
-        bunifuImageButton1.ErrorImage = (Image)resources.GetObject("bunifuImageButton1.ErrorImage");
-        bunifuImageButton1.FadeWhenInactive = false;
-        bunifuImageButton1.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-        bunifuImageButton1.Image = (Image)resources.GetObject("bunifuImageButton1.Image");
-        bunifuImageButton1.ImageActive = null;
-        bunifuImageButton1.ImageLocation = null;
-        bunifuImageButton1.ImageMargin = 20;
-        bunifuImageButton1.ImageSize = new Size(40, 40);
-        bunifuImageButton1.ImageZoomSize = new Size(60, 60);
-        bunifuImageButton1.InitialImage = (Image)resources.GetObject("bunifuImageButton1.InitialImage");
-        bunifuImageButton1.Location = new Point(128, 49);
-        bunifuImageButton1.Name = "bunifuImageButton1";
-        bunifuImageButton1.Rotation = 0;
-        bunifuImageButton1.ShowActiveImage = true;
-        bunifuImageButton1.ShowCursorChanges = true;
-        bunifuImageButton1.ShowImageBorders = true;
-        bunifuImageButton1.ShowSizeMarkers = false;
-        bunifuImageButton1.Size = new Size(60, 60);
-        bunifuImageButton1.TabIndex = 20;
-        bunifuImageButton1.ToolTipText = "";
-        bunifuImageButton1.WaitOnLoad = false;
-        bunifuImageButton1.Zoom = 20;
-        bunifuImageButton1.ZoomSpeed = 10;
+        logoImageButton.ActiveImage = null;
+        logoImageButton.AllowAnimations = true;
+        logoImageButton.AllowBuffering = false;
+        logoImageButton.AllowToggling = false;
+        logoImageButton.AllowZooming = false;
+        logoImageButton.AllowZoomingOnFocus = false;
+        logoImageButton.BackColor = Color.Transparent;
+        logoImageButton.DialogResult = DialogResult.None;
+        logoImageButton.ErrorImage = (Image)resources.GetObject("logoImageButton.ErrorImage");
+        logoImageButton.FadeWhenInactive = false;
+        logoImageButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+        logoImageButton.Image = (Image)resources.GetObject("logoImageButton.Image");
+        logoImageButton.ImageActive = null;
+        logoImageButton.ImageLocation = null;
+        logoImageButton.ImageMargin = 10;
+        logoImageButton.ImageSize = new Size(50, 50);
+        logoImageButton.ImageZoomSize = new Size(60, 60);
+        logoImageButton.InitialImage = (Image)resources.GetObject("logoImageButton.InitialImage");
+        logoImageButton.Location = new Point(128, 49);
+        logoImageButton.Name = "logoImageButton";
+        logoImageButton.Rotation = 0;
+        logoImageButton.ShowActiveImage = true;
+        logoImageButton.ShowCursorChanges = true;
+        logoImageButton.ShowImageBorders = true;
+        logoImageButton.ShowSizeMarkers = false;
+        logoImageButton.Size = new Size(60, 60);
+        logoImageButton.TabIndex = 20;
+        logoImageButton.ToolTipText = "";
+        logoImageButton.WaitOnLoad = false;
+        logoImageButton.Zoom = 10;
+        logoImageButton.ZoomSpeed = 10;
         // 
         // CurrencyConverter
         // 
@@ -521,7 +522,7 @@ partial class CurrencyConverter
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = Color.FromArgb(21, 26, 44);
         ClientSize = new Size(782, 355);
-        Controls.Add(bunifuImageButton1);
+        Controls.Add(logoImageButton);
         Controls.Add(refreshButton);
         Controls.Add(toLabel);
         Controls.Add(fromLabel);
@@ -558,5 +559,5 @@ partial class CurrencyConverter
     private Bunifu.UI.WinForms.BunifuLabel fromLabel;
     private Bunifu.UI.WinForms.BunifuLabel toLabel;
     private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 refreshButton;
-    private Bunifu.UI.WinForms.BunifuImageButton bunifuImageButton1;
+    private Bunifu.UI.WinForms.BunifuImageButton logoImageButton;
 }

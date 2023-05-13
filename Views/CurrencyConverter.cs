@@ -1,7 +1,6 @@
 using CurrencyConverter.ViewModels;
 using CurrencyConverter.Services;
 using CurrencyConverter.Helpers;
-using CurrencyConverter.Models;
 using System.Drawing.Text;
 
 namespace CurrencyConverter;
@@ -42,20 +41,20 @@ public partial class CurrencyConverter : Form
 
         // Labels
         titleLabel.Font = new Font(privateFonts.Families[0], titleLabel.Font.Size, FontStyle.Bold);
-        amountLabel.Font = new Font(privateFonts.Families[0], amountLabel.Font.Size, FontStyle.Bold); ;
-        toLabel.Font = new Font(privateFonts.Families[0], toLabel.Font.Size, FontStyle.Bold); ;
-        fromLabel.Font = new Font(privateFonts.Families[0], fromLabel.Font.Size, FontStyle.Bold); ;
-        resultLabel.Font = new Font(privateFonts.Families[0], resultLabel.Font.Size, FontStyle.Bold); ;
+        amountLabel.Font = new Font(privateFonts.Families[0], amountLabel.Font.Size, FontStyle.Bold);
+        toLabel.Font = new Font(privateFonts.Families[0], toLabel.Font.Size, FontStyle.Bold);
+        fromLabel.Font = new Font(privateFonts.Families[0], fromLabel.Font.Size, FontStyle.Bold);
+        resultLabel.Font = new Font(privateFonts.Families[0], resultLabel.Font.Size, FontStyle.Bold);
 
         // Buttons
-        ConvertButton.Font = new Font(privateFonts.Families[0], ConvertButton.Font.Size, FontStyle.Bold); ;
+        ConvertButton.Font = new Font(privateFonts.Families[0], ConvertButton.Font.Size, FontStyle.Bold);
 
         // Textboxes
-        sourceAmountTextBox.Font = new Font(privateFonts.Families[0], sourceAmountTextBox.Font.Size, FontStyle.Regular); ;
+        sourceAmountTextBox.Font = new Font(privateFonts.Families[0], sourceAmountTextBox.Font.Size, FontStyle.Regular);
 
         // Dropdown menu
-        sourceCurrencycomboBox.Font = new Font(privateFonts.Families[0], sourceCurrencycomboBox.Font.Size, FontStyle.Regular); ;
-        targetCurrencycomboBox.Font = new Font(privateFonts.Families[0], targetCurrencycomboBox.Font.Size, FontStyle.Regular); ;
+        sourceCurrencycomboBox.Font = new Font(privateFonts.Families[0], sourceCurrencycomboBox.Font.Size, FontStyle.Regular);
+        targetCurrencycomboBox.Font = new Font(privateFonts.Families[0], targetCurrencycomboBox.Font.Size, FontStyle.Regular);
     }
 
     // Events Handling
