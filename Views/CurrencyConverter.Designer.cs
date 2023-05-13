@@ -1,4 +1,6 @@
-﻿namespace CurrencyConverter;
+﻿using Bunifu.Framework.UI;
+
+namespace CurrencyConverter;
 
 partial class CurrencyConverter
 {
@@ -433,7 +435,7 @@ partial class CurrencyConverter
         refreshButton.IconRightPadding = new Padding(3, 3, 7, 3);
         refreshButton.IconSize = 25;
         refreshButton.IdleBorderColor = Color.Transparent;
-        refreshButton.IdleBorderRadius = 40;
+        refreshButton.IdleBorderRadius = refreshButton.Width / 2;
         refreshButton.IdleBorderThickness = 1;
         refreshButton.IdleFillColor = Color.Transparent;
         refreshButton.IdleIconLeftImage = (Image)resources.GetObject("refreshButton.IdleIconLeftImage");
