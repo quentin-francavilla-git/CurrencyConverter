@@ -1,4 +1,6 @@
 ﻿using Bunifu.Framework.UI;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace CurrencyConverter;
 

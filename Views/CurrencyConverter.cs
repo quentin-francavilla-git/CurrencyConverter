@@ -2,6 +2,11 @@ using CurrencyConverter.ViewModels;
 using CurrencyConverter.Services;
 using CurrencyConverter.Helpers;
 using System.Drawing.Text;
+using System.Windows.Forms;
+using System.Drawing;
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace CurrencyConverter;
 
