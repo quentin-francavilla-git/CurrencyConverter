@@ -38,7 +38,7 @@ public class ExchangeCurrencyService : IExchangeCurrencyService
 
     public async Task<decimal> ConvertAmountCommand(decimal SourceAmount, string SourceCurrency, string targetCurrency)
     {
-        string apiUrl = $"https://api.apilayer.com/exchangerates_data/" +
+        string apiUrl = "https://api.apilayer.com/exchangerates_data/" +
             $"convert?to={targetCurrency}" +
             $"&from={SourceCurrency}" +
             $"&amount={SourceAmount}";
